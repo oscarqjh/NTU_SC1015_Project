@@ -121,6 +121,7 @@ We have experimented with multiple machine learning models. We started of with u
 
 Next, we used what we have learned in this course (Uni-Variated Decision Tree) and obtained an model with accuracy of **~95%**. However, we deemed this model not to be so good since it runs the risk of overfitting, moreover, it requires complete information on golddiff at the end of the match to classify the outcome of a match. The notable flaws in this model are that gold diff can varies greatly every minutes, hence result is only reliable on the final gold diff, and also, it is not very practical since only being able to classify the outcome of a match after it ended is not useful.   
 
+---
 
 *Submission: This project is submitted to Nanyang Technological University Singapore as a project for module SC1015 AY2023*
 
