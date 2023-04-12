@@ -22,8 +22,8 @@ All Dataset found in this repository is taken from [Kaggle](https://www.kaggle.c
 #### 1.2 Suggested Read Order
 We separated our Jupyter notebook into different segments for easier reading, we suggest reading in the following order:
 1. [EDA.ipynb](https://github.com/oscarqjh/SC1015Project/blob/0b55f502c17cbfdaa5d3ea92ee0da99eaec1972f/EDA.ipynb)
-2. LogisticRegression.ipynb
-3. RNN.ipynb
+2. [LogisticRegression.ipynb](https://github.com/oscarqjh/SC1015Project/blob/b24c3821a2248fd4b2715abbbd9ff74c4c9f3e6d/LogisticRegression.ipynb)
+3. [RNN.ipynb](https://github.com/oscarqjh/SC1015Project/blob/b24c3821a2248fd4b2715abbbd9ff74c4c9f3e6d/RNN.ipynb)
 
 #### 1.2 Dependencies
 - Matplotlib 3.7
