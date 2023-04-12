@@ -123,7 +123,7 @@ Next, we used what we have learned in this course (Uni-Variated Decision Tree) a
 
 ---
 
-*Submission: This project is submitted to Nanyang Technological University Singapore as a project for module SC1015 AY2023*
+*Submission: This repository is submitted to Nanyang Technological University Singapore as a project for module SC1015 AY2023*
 
 <h3 align="center">Reference</h3>
 
