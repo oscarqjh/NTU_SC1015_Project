@@ -6,9 +6,9 @@
 ![image](https://drive.google.com/uc?export=view&id=1xdctuhzj4g0pXHeGj9CBHC-WMw6ghyfM)
 
 ### Team members:
-- Oscar
-- Dimas
-- Mokshitt
+- [Oscar](https://github.com/oscarqjh)
+- [Dimas](https://github.com/desolaterobot)
+- [Mokshitt](https://github.com/mokshittjain)
 
 ---
 ### Section 1: Dataset and Misc.
@@ -20,12 +20,12 @@ All Dataset found in this repository is taken from [Kaggle](https://www.kaggle.c
 |   ├── Kills.csv   
 ```
 #### 1.2 Suggested Read Order
-We seperated our jupyter notebook into different segments for easier reading, we suggest reading in the following order:
+We separated our Jupyter notebook into different segments for easier reading, we suggest reading in the following order:
 1. EDA.ipynb
 2. LogisticRegression.ipynb
 3. RNN.ipynb
 
-#### 1.2 Dependancies
+#### 1.2 Dependencies
 - Matplotlib 3.7
 - Pandas 2.0 
 - Seaborn 0.12
@@ -36,7 +36,7 @@ We seperated our jupyter notebook into different segments for easier reading, we
 
 #### 1.3 Environment Set up
 Since we will be using PyTorch's RNN Model, installation of the API is required for `RNN.ipynb`
-> Instructions taken from https://pytorch.org/get-started/locally/
+> Instructions are taken from https://pytorch.org/get-started/locally/
 
 #### Without Anaconda (skip this if using Anaconda)
 Create a Conda environment:
@@ -58,7 +58,8 @@ pip install torchvision
 #### 2.1 About League of Legends   
 League of Legends (LoL) is a multiplayer online battle arena (MOBA) game developed and published by Riot Games in 2009, with over 153 million monthly active players. 
 
-#### 2.2 Project Objectives
+#### 2.2 Project Objectives   
+
 
 ---
 ### Section 3: Machine Learning Models
