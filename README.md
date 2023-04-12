@@ -91,8 +91,10 @@ Logistic Regression is a statistical model often used for classification. It est
 
 For this project, we will be using it to predict the outcome of a game (win/lose) based on "x kills obtained before y minutes". For the model based on "x kills obtained before 5 minutes" we are able to obtain a model with **~64%** accuracy.
 
-#### 3.2 Multi-Variated Decision Tree   
-A decision tree is a non-parametric supervised learning algorithm utilised for classification and regression tasks. Multi Variated Decision Tree models are a type of classification model that is based on multiple variables[2].
+#### 3.2 Single/Multi-Variated Decision Tree   
+A decision tree is a non-parametric supervised learning algorithm utilised for classification and regression tasks. Multi Variated Decision Tree models are a type of classification model that is based on multiple variables[2]. In this project, we used both single and multi-variated decision tree on different analysis.
+
+For this project we used single-variated decision tree on 'final gold difference' as variable to predict a match's outcome. Despite obtaining an accuracy of **~95%** we deemed it to be not a good model due to some flaws that it possess. This model requires complete information up until the end of a match to be able to predict a match's outcome. This makes it not practical since such a model will be useless in a real life setting. However, a possible improvement we can make is to use only gold difference up until x minute for classification. Though, there will also be shortcoming for this approach due to its nature that gold difference can vary wildly from every single minute. Hence, we will try to seek for better models for prediction of a game's outcome.   
 
 #### 3.3 Random Forest    
 Random Forest is a commonly used machine learning algorithm which combines the output of multiple decision trees to reach a single result[3].
