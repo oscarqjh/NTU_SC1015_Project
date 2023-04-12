@@ -13,7 +13,7 @@
 ---
 ### Section 1: Dataset and Misc.
 #### 1.1 Dataset
-All Dataset found in this repository is taken from [Kaggle](https://www.kaggle.com/datasets/chuckephron/leagueoflegends?select=LeagueofLegends.csv). There are many datasets, but we will be mainly using:  
+All Dataset found in this repository is taken from [Kaggle](https://www.kaggle.com/datasets/chuckephron/leagueoflegends?select=LeagueofLegends.csv). There are multiple files, but we will be mainly using:  
 ```
 ├── datasets   
 |   ├── LeagueofLegends.csv   
