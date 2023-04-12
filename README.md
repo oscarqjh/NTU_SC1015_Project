@@ -61,6 +61,27 @@ League of Legends ([LoL](https://www.leagueoflegends.com/en-sg/)) is a multiplay
 #### 2.2 Project Objectives   
 In this project, we aim to derive strategies for the game through an in-depth exploratory data analysis(EDA) of the dataset on various variables we deemed important. Furthermore, we also aim to apply these insights that we have obtained through EDA through the usage of various machine learning methods to predict the outcome of any single match.   
 
+#### 2.3 Exploratory Data Analysis
+In this section, we tried to explore the dataset and obtain as much insights as possible.    
+
+**Extend of Dataset**   
+First, we looked at the the range of competitive matches present in this dataset and found out that it is quite extensive and contains all competitive matches from year 2014 - 2018.   
+
+**Win Rate of Teams**    
+Next, we looked at the general win rate of blue vs red team and found out that blue team has a statistically higher chance of winning than red team.   
+
+**Gamelength**   
+Next, we analysed the game length of competitive matches and found that mean gamelength is around 37 minutes. Also, we have noticed that the average gamelength of recent years is shorter than earlier years.    
+
+**Objectives**   
+Next, we analysed different objectives such Baron kills, Champion kills, Dragon kills, Tower takedown, Inhib takedown and gold difference as possible independant variables to be used in our machine learning models.   
+
+**Champion Kills Analysis**   
+Finally, we analysed the Kills variable. We did this through making a kill map and visualised the density of kills happened in the map, and also the time at which the kills happened at. We also looked at the involvement of Jungle Players in the early game (before 15mins) and found out that winning team's jungle shows a different tendency in which lane they choose to gank. Also, we analysed the kills variable as a time series, and confirmed the trend that winning teams' cumulative kill tends to be steeper than that of losing team. This suggest that on an average, winning team is expected to snowball the matches with their early advantages and thus, gaining early advantage should be a important factor to consider. (Maybe it means that playing for ultra late game might not be a good idea?)   
+
+#### 2.4 Hypothesis Testing   
+In the previous section we analysed the objectives as possible independant variables for our machine learning model. We first visualised these variables against dependant variable (win/lose) on a Pearson's Correalation Coefficient heat map. From this, we are able to derive the top 5 independant variable that most likely have a effect on the outcome of the game. Finally, we tested our hypothesis using T-test and confirmed our hyposthesis.   
+
 ---
 ### Section 3: Machine Learning Models
 In this project, we experimented with a few machine-learning models:   
@@ -84,8 +105,20 @@ For this project, we used sequential data of "difference between events that occ
 ---
 ### Section 4: Conclusion   
 #### 4.1 Possible Strategies Derived   
+**Early Jungle Invasion**   
+Early jungle Invasion is a viable strategy to potentailly get some very early kills within the first 1-2 minutes of the game. However, after obtaining the first kill, subsequent kills yields marginal advantage for the team. Hence, it might be wiser to not greed for more kills after getting the first kill, but instead focus on laning phase, where the effects of a kill is much more significant.   
+
+**Jungle Player Gank**   
+Although the observation from our EDA might not show the causal and effect relation between Jungle involvement and chance of winning. It might be wise for Blue Team jungle to focus more on the top side for a higher chance of winning, while the red team jungle to focus more on the bottom lane.   
+
+**Choosing Team**   
+Although in competitive matches teams cant choose which side (blue or red) to start from. However, from our analysis, blue team has a statistically higher rate of winning. So, whenever possible, players should always choose to be on the blue team.   
 
 #### 4.2 Prediction of Match Outcome   
+We have experimented with multiple machine learning models. We started of with uni-variated model (Logistic Regression) which yield an accuracy of **~64%**.   
+
+Next, we used what we have learned in this course (Uni-Variated Decision Tree) and obtained an model with accuracy of **~95%**. However, we deemed this model not to be so good since it runs the risk of overfitting, moreove, it requires complete information on golddiff at the end of the match to classify the outcome of a match. The notable flaws in this model are that gold diff can varies greatly every minutes, hence result is only reliable on the final gold diff, and also, it is not very practical since only being able to classify the outcome of a match after it ended is not useful.   
+
 
 
 <h3 align="center">Reference</h3>
