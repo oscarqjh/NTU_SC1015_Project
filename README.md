@@ -35,7 +35,7 @@ We separated our Jupyter notebook into different segments for easier reading. we
 - PyTorch 2.0
 
 #### 1.3 Environment Set up
-Since we will be using PyTorch's RNN Model, installation of the API is required for `RNN.ipynb`
+Since we will be using PyTorch's RNN Model, installation of the API is required for `RNN.ipynb`.
 > Instructions are taken from https://pytorch.org/get-started/locally/
 
 #### Without Anaconda (skip this if using Anaconda)
@@ -56,7 +56,7 @@ pip install torchvision
 ---
 ### Section 2: Introduction   
 #### 2.1 About League of Legends   
-League of Legends (LoL) is a multiplayer online battle arena (MOBA) game developed and published by Riot Games in 2009, with over 153 million monthly active players. The game features two teams of five players, each controlling a champion with unique abilities and strengths. The objective of the game is to destroy the enemy's Nexus while defending their own. An important aspect of the game is objectives management as there are several objectives such as Towers, Dragons, Barons, Kills, Inhibitors, and Gold. Obtaining and managing these objectives well can give a team a significant edge over the enemy.   
+League of Legends ([LoL](https://www.leagueoflegends.com/en-sg/)) is a multiplayer online battle arena (MOBA) game developed and published by Riot Games in 2009, with over 153 million monthly active players. The game features two teams of five players, each controlling a champion with unique abilities and strengths. The objective of the game is to destroy the enemy's Nexus while defending their own. An important aspect of the game is objectives management as there are several objectives such as Towers, Dragons, Barons, Kills, Inhibitors, and Gold. Obtaining and managing these objectives well can give a team a significant edge over the enemy.   
 
 #### 2.2 Project Objectives   
 In this project, we aim to derive strategies for the game through an in-depth exploratory data analysis(EDA) of the dataset on various variables we deemed important. Furthermore, we also aim to apply these insights that we have obtained through EDA through the usage of various machine learning methods to predict the outcome of any single match.   
@@ -68,10 +68,10 @@ In this project, we experimented with a few machine-learning models:
 #### 3.1 Logistic Regression    
 Logistic Regression is a statistical model often used for classification. It estimates the probability of an event (dependent variable) based on a given dataset of independent variables[1].   
 
-For this project, we will be using it to predict the outcome of a game (win/lose) based on "x kills obtained before y minutes". For the model based on "x kills obtained before 5 minutes" we are able to obtain a model with ~64% accuracy
+For this project, we will be using it to predict the outcome of a game (win/lose) based on "x kills obtained before y minutes". For the model based on "x kills obtained before 5 minutes" we are able to obtain a model with **~64%** accuracy.
 
 #### 3.2 Multi-Variated Decision Tree   
-A decision tree is a non-parametric supervised learning algorithm utilised for classification and regression tasks. Multi Variated Decision Tree models are a type of classification model that is based on multiple variables[2]
+A decision tree is a non-parametric supervised learning algorithm utilised for classification and regression tasks. Multi Variated Decision Tree models are a type of classification model that is based on multiple variables[2].
 
 #### 3.3 Random Forest    
 Random Forest is a commonly used machine learning algorithm which combines the output of multiple decision trees to reach a single result[3].
@@ -79,7 +79,7 @@ Random Forest is a commonly used machine learning algorithm which combines the o
 #### 3.4 Recurrent Neural Network   
 RNN is a class of artificial neural networks which uses sequential data. A characteristic feature of RNNs is that they are about to take a hidden output from the previous iteration as inputs for the next iteration[4]. 
 
-For this project, we used sequential data of "difference between events that occurred at every minute from 0 to x minutes" for different variables which we identified to be important such as Baron kills, Dragon kills, Tower takedowns, Gold difference and Champion kills to predict the outcome of the game. With PyTorch's RNN model[5] we are able to obtain an accuracy of ~84%, the best so far within our project.
+For this project, we used sequential data of "difference between events that occurred at every minute from 0 to x minutes" for different variables which we identified to be important such as Baron kills, Dragon kills, Tower takedowns, Gold difference and Champion kills to predict the outcome of the game. With PyTorch's RNN model[5] we are able to obtain an accuracy of **~84%**, the best so far within our project.
 
 ---
 ### Section 4: Conclusion   
