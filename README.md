@@ -18,11 +18,15 @@ All Dataset found in this repository is taken from [Kaggle](https://www.kaggle.c
 ├── datasets   
 |   ├── LeagueofLegends.csv   
 |   ├── Kills.csv   
+|   ├── Structures.csv   
 ```
 #### 1.2 Suggested Read Order
 We separated our Jupyter notebook into different segments for easier reading. we suggest reading them in the following order:
-1. [EDA.ipynb](https://github.com/oscarqjh/SC1015Project/blob/0b55f502c17cbfdaa5d3ea92ee0da99eaec1972f/EDA.ipynb)
+1. [Initial_EDA.ipynb](https://github.com/oscarqjh/SC1015Project/blob/0b55f502c17cbfdaa5d3ea92ee0da99eaec1972f/EDA.ipynb)
 2. [LogisticRegression.ipynb](https://github.com/oscarqjh/SC1015Project/blob/b24c3821a2248fd4b2715abbbd9ff74c4c9f3e6d/LogisticRegression.ipynb)
+3. [Champion_Analysis.ipynb]()
+4. [Gold_Analysis.ipynb]()
+5. [TreesAndForests.ipynb]()
 3. [RNN.ipynb](https://github.com/oscarqjh/SC1015Project/blob/b24c3821a2248fd4b2715abbbd9ff74c4c9f3e6d/RNN.ipynb)
 
 #### 1.2 Dependencies
@@ -77,7 +81,10 @@ Next, we analysed the game length of competitive matches and found that mean gam
 Next, we analysed different objectives such Baron kills, Champion kills, Dragon kills, Tower takedown, Inhib takedown and gold difference as possible independant variables to be used in our machine learning models.   
 
 **Champion Kills Analysis**   
-Finally, we analysed the Kills variable. We did this through making a kill map and visualised the density of kills happened in the map, and also the time at which the kills happened at. We also looked at the involvement of Jungle Players in the early game (before 15mins) and found out that winning team's jungle shows a different tendency in which lane they choose to gank. Also, we analysed the kills variable as a time series, and confirmed the trend that winning teams' cumulative kill tends to be steeper than that of losing team. This suggest that on an average, winning team is expected to snowball the matches with their early advantages and thus, gaining early advantage should be a important factor to consider. (Maybe it means that playing for ultra late game might not be a good idea?)   
+Finally, we analysed the Kills variable. We did this through making a kill map and visualised the density of kills happened in the map, and also the time at which the kills happened at. We also looked at the involvement of Jungle Players in the early game (before 15mins) and found out that winning team's jungle shows a different tendency in which lane they choose to gank. Also, we analysed the kills variable as a time series, and confirmed the trend that winning teams' cumulative kill tends to be steeper than that of losing team. This suggest that on an average, winning team is expected to snowball the matches with their early advantages and thus, gaining early advantage should be a important factor to consider. (Maybe it means that playing for ultra late game might not be a good idea?)    
+
+**Champion Usage Analysis**   
+We also did a analysis on each champions' use rate and win rate. Through this analysis we were able to obtain valuable information on which champions are *META* from 2014-2018. We can thus derive strategies based on this information, since high usage of a specific champion in such tournment setting would suggest said champion to be considered *strong*, and combining with analysis on the win rate of these champions, we can safely assume that picking these champions with high usage and winrate can boost a team's chance of winning to a certain extent.   
 
 #### 2.4 Hypothesis Testing   
 In the previous section we analysed the objectives as possible independant variables for our machine learning model. We first visualised these variables against dependant variable (win/lose) on a Pearson's Correalation Coefficient heat map. From this, we are able to derive the top 5 independant variable that most likely have a effect on the outcome of the game. Finally, we tested our hypothesis using T-test and confirmed our hyposthesis.   
@@ -91,18 +98,24 @@ Logistic Regression is a statistical model often used for classification. It est
 
 For this project, we will be using it to predict the outcome of a game (win/lose) based on "x kills obtained before y minutes". For the model based on "x kills obtained before 5 minutes" we are able to obtain a model with **~64%** accuracy.
 
+We also modelled it on tower takedown and tried predicting the outcome of a game based on "x tower takedowns before y minutes". Despite being able to achieve a much better accuracy of **~71%**, we observed a weird phenomenon where getting 1-3 tower takedowns before y minutes actually lowers the probability of the team to win. The probability of winning only becomes more than 50% after getting 4 tower takedowns or more before y minutes.   
+
 #### 3.2 Single/Multi-Variated Decision Tree   
 A decision tree is a non-parametric supervised learning algorithm utilised for classification and regression tasks. Multi Variated Decision Tree models are a type of classification model that is based on multiple variables[2]. In this project, we used both single and multi-variated decision tree on different analysis.
 
-For this project we used single-variated decision tree on 'final gold difference' as variable to predict a match's outcome. Despite obtaining an accuracy of **~95%** we deemed it to be not a good model due to some flaws that it possess. This model requires complete information up until the end of a match to be able to predict a match's outcome. This makes it not practical since such a model will be useless in a real life setting. However, a possible improvement we can make is to use only gold difference up until x minute for classification. Though, there will also be shortcoming for this approach due to its nature that gold difference can vary wildly from every single minute. Hence, we will try to seek for better models for prediction of a game's outcome.   
+For this project we used single-variated decision tree on 'final gold difference' as variable to predict a match's outcome. Despite obtaining an accuracy of **~95%** we deemed it to be not a good model due to some flaws that it possess. This model requires complete information up until the end of a match to be able to predict a match's outcome. This makes it not practical since such a model will be useless in a real life setting. However, a possible improvement we can make is to use only gold difference up until x minute for classification. Though, there will also be shortcoming for this approach due to its nature that gold difference can vary wildly from every single minute. Hence, we will try to seek for better models for prediction of a game's outcome.    
+
+Following this, we also used multi-variated decision tree on *first tower timing, first inhib timing, first dragon timing, first kill timing and first baron timing*. We were able to obtain an accuracy of **~92%** however there are many flaws in this model which we will provide more details on in the Jupyternb itself.   
 
 #### 3.3 Random Forest    
-Random Forest is a commonly used machine learning algorithm which combines the output of multiple decision trees to reach a single result[3].
+Random Forest is a commonly used machine learning algorithm which combines the output of multiple decision trees to reach a single result[3].    
+
+For this project, we first used normal classification trees with depth of 5 on *first tower timing, first inhib timing, first dragon timing, first kill timing and first baron timing*. And combined them using the random forest model of 400 trees and was able to obtain a pretty high classification accuracy of **~93%**. Yet, there are still some flaws in this model since it also runs the risk of overfitting, and the inability to predict the match's outcome if there are presence of missing values.
 
 #### 3.4 Recurrent Neural Network   
 RNN is a class of artificial neural networks which uses sequential data. A characteristic feature of RNNs is that they are about to take a hidden output from the previous iteration as inputs for the next iteration[4]. 
 
-For this project, we used sequential data of "difference between events that occurred at every minute from 0 to x minutes" for different variables which we identified to be important such as Baron kills, Dragon kills, Tower takedowns, Gold difference and Champion kills to predict the outcome of the game. With PyTorch's RNN model[5] we are able to obtain an accuracy of **~84%**, the best so far within our project.
+For this project, we used sequential data of "difference between events that occurred at every minute from 0 to x minutes" for different variables which we identified to be important such as Baron kills, Dragon kills, Tower takedowns, Gold difference and Champion kills to predict the outcome of the game. With PyTorch's RNN model[5] we are able to obtain an accuracy of **~84%**, the best so far within our project. Overall, this is the model we are most satisfied with.   
 
 ---
 ### Section 4: Conclusion   
@@ -116,10 +129,20 @@ Although the observation from our EDA might not show the causal and effect relat
 **Choosing Team**   
 Although in competitive matches teams cant choose which side (blue or red) to start from. However, from our analysis, blue team has a statistically higher rate of winning. So, whenever possible, players should always choose to be on the blue team.   
 
+**Choosing Champions**   
+If we disregard other factors such as team synergy and counter picks, picking the same champions with the highest usage rate and win rate according to our analysis in `Champion_Analysis.ipynb` should yield a team the best chance to win.    
+
 #### 4.2 Prediction of Match Outcome   
-We have experimented with multiple machine learning models. We started of with uni-variated model (Logistic Regression) which yield an accuracy of **~64%**.   
+We have experimented with multiple machine learning models. We started of with uni-variated model (Logistic Regression) which yield an accuracy of **~64%** for *cumulative kills* and an accuracy of **~71%** for *cumulative towers*. This is a very basic model which can only incorporate 1 variable at a time.      
 
 Next, we used what we have learned in this course (Uni-Variated Decision Tree) and obtained an model with accuracy of **~95%**. However, we deemed this model not to be so good since it runs the risk of overfitting, moreover, it requires complete information on golddiff at the end of the match to classify the outcome of a match. The notable flaws in this model are that gold diff can varies greatly every minutes, hence result is only reliable on the final gold diff, and also, it is not very practical since only being able to classify the outcome of a match after it ended is not useful.   
+
+Next, we used the Random Forest model on *first tower timing, first inhib timing, first dragon timing, first kill timing and first baron timing* and was able to obtain an accuracy of **~93%**. Similar to the decision tree, there are many flaws with this model which we are unsatisfied with despite its high accuracy.   
+
+Lastly, we decided to use the RNN model with time series input of *kill diff, tower diff, baron diff, dragon diff and gold diff* before 30 minutes. We were able to obtain a model with satisfactory accuracy of **~84%**. Overall, this is the model we are most satisfied with due to its ability to predict match outcomes with based on multiple variables.   
+
+#### 4.3 Ending Notes   
+We are very pleased with our results, however we are also aware of the difficulties to truly predict a match's outcome with extremely high accuracy and precision due to the multitude of factors which can affect a match's outcome, especially those factors which is hard to be expressed in the form of tangible data such as a player's skill level, playstyle, condition. Moreover, there are also factors such as champion synergy and champion counter picking which are important but unstructured datas which can be hard to model after.    
 
 ---
 
