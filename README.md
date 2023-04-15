@@ -8,7 +8,7 @@
 ### Team members:
 - [Oscar](https://github.com/oscarqjh)
 - [Dimas](https://github.com/desolaterobot)
-- [Mokshitt](https://github.com/mokshittjain)
+- [Mokshit](https://github.com/mokshittjain)
 
 ---
 ### Section 1: Dataset and Misc.
