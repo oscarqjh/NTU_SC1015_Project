@@ -8,7 +8,7 @@
 ### Team members:
 - [Oscar](https://github.com/oscarqjh)
 - [Dimas](https://github.com/desolaterobot)
-- [Mokshitt](https://github.com/mokshittjain)
+- [Mokshit](https://github.com/mokshittjain)
 
 ---
 ### Section 1: Dataset and Misc.
@@ -142,7 +142,7 @@ Next, we used the Random Forest model on *first tower timing, first inhib timing
 Lastly, we decided to use the RNN model with time series input of *kill diff, tower diff, baron diff, dragon diff and gold diff* before 30 minutes. We were able to obtain a model with satisfactory accuracy of **~84%**. Overall, this is the model we are most satisfied with due to its ability to predict match outcomes with based on multiple variables.   
 
 #### 4.3 Ending Notes   
-We are very pleased with our results, however we are also aware of the difficulties to truly predict a match's outcome with extremely high accuracy and precision due to the multitude of factors which can affect a match's outcome, especially those factors which is hard to be expressed in the form of tangible data such as a player's skill level, playstyle, condition. Moreover, there are also factors such as champion synergy and champion counter picking which are important but unstructured datas which can be hard to model after.    
+We are very pleased with our results, however we are also aware of the difficulties to truly predict a match's outcome with extremely high accuracy and precision due to the multitude of factors which can affect a match's outcome, especially those factors which is hard to be expressed in the form of tangible data such as a player's skill level, playstyle, condition. Moreover, there are also factors such as champion synergy and champion counter picking which are important but unstructured datas which can be hard to model after. Moreover, we did not fully utilise all the other files available in this dataset, such as `monsters.csv` and `bans.csv` due to time constraints. I believe that more insights and better models can be derived if we are able to incoporate all the available datas.       
 
 ---
 
