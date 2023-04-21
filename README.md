@@ -121,10 +121,13 @@ For this project, we used sequential data of "difference between events that occ
 ### Section 4: Conclusion   
 #### 4.1 Possible Strategies Derived   
 **Early Jungle Invasion**   
-Early jungle Invasion is a viable strategy to potentailly get some very early kills within the first 1-2 minutes of the game. However, after obtaining the first kill, subsequent kills yields marginal advantage for the team. Hence, it might be wiser to not greed for more kills after getting the first kill, but instead focus on laning phase, where the effects of a kill is much more significant.   
+From our analysis on kills in `LogisticRegression.ipynb`, we can see that early jungle Invasion is a viable strategy to potentailly get some very early kills within the first 1-2 minutes of the game. However, after obtaining the first kill, subsequent kills yields *marginal* advantage for the team. Hence, it might be wiser to not greed for more kills after getting the first kill, but instead focus on laning phase, where the effects of a kill is much more significant.   
+
+**Playing for Early Dominance**   
+From our analysis on cumulative kills in `Initial_EDA.ipynb`, we can see that the line for cumulative kills of winning team being steeper than the losing team. This suggests that there is a tendency for early advantages to snowball into the lategame. Meaning that it might be a viable and a wiser strategy to choose a team composition that can secure early game advantage instead of choosing a late game team composition that tries to survive long enough for their champion to peek in performance.   
 
 **Jungle Player Gank**   
-Although the observation from our EDA might not show the causal and effect relation between Jungle involvement and chance of winning. It might be wise for Blue Team jungle to focus more on the top side for a higher chance of winning, while the red team jungle to focus more on the bottom lane.   
+Although the observation from our EDA might not show the causal and effect relation between Jungle involvement and chance of winning. It might be wise for jungles to focus on all lanes instead of just the bot lane as statistics in our kill map in `Initial_EDA.ipynb` shown that winning teams generally have the jungle's involvement more spread out between all 3 lanes, while loosing teams jungle involvement then to focus on the bottom lane.   
 
 **Choosing Team**   
 Although in competitive matches teams cant choose which side (blue or red) to start from. However, from our analysis, blue team has a statistically higher rate of winning. So, whenever possible, players should always choose to be on the blue team.   
