@@ -10,6 +10,9 @@
 - [Dimas](https://github.com/desolaterobot)
 - [Mokshit](https://github.com/mokshittjain)
 
+### Project Video Presentation
+The video presentation for this project can be found [here](https://youtu.be/-04tsiXo0pM).
+
 ---
 ### Section 1: Dataset and Misc.
 #### 1.1 Dataset
