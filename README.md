@@ -118,7 +118,7 @@ For this project, we first used normal classification trees with depth of 5 on *
 
 #### **3.4 K-Nearest Neighbour**
 
-The KNN model is a supervised learning classifier which uses proximity to make classifications or predictions about the grouping of individual data points. The basic idea is that similar points can be found near one another and finally classified base of *majority vote*[4].   
+The KNN model is a supervised learning classifier which uses proximity to make classifications or predictions about the grouping of individual data points. The basic idea is that similar points can be found near one another and thus classified base of *majority vote*[4].   
 
 In this project, we used counts of events occurred at x minutes into the game. We first used the full game length for our initial model, which produced a very high classification accuracy of **~96%**, however we were unsatisfied with this model as it has little practical value since it it using the full game's data. Meaning that it could only predict the final outcome of the game after the match is over. So next, we decided to only use partial game data - data until 30 minutes of the game. For this model, we were able to obtain a accuracy of **~81.4%**, a pretty satifactory result.   
 
