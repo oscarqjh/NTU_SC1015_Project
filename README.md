@@ -66,6 +66,8 @@ pip install torchvision
 #### 2.1 About League of Legends   
 League of Legends ([LoL](https://www.leagueoflegends.com/en-sg/)) is a multiplayer online battle arena (MOBA) game developed and published by Riot Games in 2009, with over 153 million monthly active players. The game features two teams of five players, each controlling a champion with unique abilities and strengths. The objective of the game is to destroy the enemy's Nexus while defending their own. An important aspect of the game is objectives management as there are several objectives such as Towers, Dragons, Barons, Kills, Inhibitors, and Gold. Obtaining and managing these objectives well can give a team a significant edge over the enemy.   
 
+![image](https://drive.google.com/uc?export=view&id=1Xk-JxKnlQozdumriRus3jrR6Viklx24k)
+
 #### 2.2 Project Objectives   
 In this project, we aim to derive strategies for the game through an in-depth exploratory data analysis(EDA) of the dataset on various variables we deemed important. Furthermore, we also aim to apply these insights that we have obtained through EDA through the usage of various machine learning methods to predict the outcome of any single match.   
 
