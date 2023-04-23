@@ -67,7 +67,7 @@ pip install torchvision
 League of Legends ([LoL](https://www.leagueoflegends.com/en-sg/)) is a multiplayer online battle arena (MOBA) game developed and published by Riot Games in 2009, with over 153 million monthly active players. The game features two teams of five players, each controlling a champion with unique abilities and strengths. The objective of the game is to destroy the enemy's Nexus while defending their own. An important aspect of the game is objectives management as there are several objectives such as Towers, Dragons, Barons, Kills, Inhibitors, and Gold. Obtaining and managing these objectives well can give a team a significant edge over the enemy.   
 
 ![image](https://drive.google.com/uc?export=view&id=1Xk-JxKnlQozdumriRus3jrR6Viklx24k)
-*source: [link](https://www.leagueoflegends.com/en-gb/news/game-updates/patch-11-23-notes/) and edited by Oscar*
+
 
 #### 2.2 Project Objectives   
 In this project, we aim to derive strategies for the game through an in-depth exploratory data analysis(EDA) of the dataset on various variables we deemed important. Furthermore, we also aim to apply these insights that we have obtained through EDA through the usage of various machine learning methods to predict the outcome of any single match.   
@@ -98,6 +98,10 @@ In the previous section we analysed the objectives as possible independant varia
 
 ---
 ### Section 3: Machine Learning Models
+
+![image](https://drive.google.com/uc?export=view&id=1B40iu5KWpLH9eI-ohaI7CEv1fyuSN00D)
+
+
 In this project, we experimented with a few machine-learning models:   
 
 #### **3.1 Logistic Regression**    
@@ -136,6 +140,7 @@ For this project, we used sequential data of "difference between events that occ
 
 ---
 ### Section 4: Conclusion   
+![image](https://drive.google.com/uc?export=view&id=1KZCLlhBgfuG94wQwGUe-t148Mw8ZIttz)
 #### 4.1 Possible Strategies Derived   
 **Early Jungle Invasion**   
 From our analysis on kills in `LogisticRegression.ipynb`, we can see that getting 1-2 kills before 3 minutes translates to a significant increased chance of winning however, anything more only yields marginal increase in chances of winning, this sheds some light into common strategies such as early jungle invasion. Early jungle Invasion is a viable strategy to potentailly get some very early kills within the first 1-2 minutes of the game. However, after obtaining the first 2 kills, subsequent kills yields *marginal* advantage for the team. Hence, it might be wiser to not greed for more kills after getting the first kill, but instead focus on laning phase, where the effects of a kill is much more significant.   
@@ -168,7 +173,15 @@ We are very pleased with our results, however we are also aware of the difficult
 
 ---
 
-*Submission: This repository is submitted to Nanyang Technological University Singapore as a project for module SC1015 AY2023*
+*Submission: This repository is submitted to Nanyang Technological University Singapore as a project for module SC1015 AY2023*   
+
+---
+
+### Credit
+Title Banner - made by Oscar   
+League of Legends Banner - *source: [here](https://www.leagueoflegends.com/en-gb/news/game-updates/patch-11-23-notes/) and edited by Oscar*   
+Machine Learning Banner - *source: [here](https://free4kwallpapers.com/3d-abstract/houdini-fundamental-cube-wallpaper--P9jy) and edited by Oscar*   
+Conclusion Banner - *source: [here](https://cutewallpaper.org/21/gigabyte-wallpaper-4k/view-page-21.html) and edited by Oscar*     
 
 <h3 align="center">Reference</h3>
 
