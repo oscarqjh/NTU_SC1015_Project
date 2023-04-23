@@ -168,7 +168,7 @@ We are very pleased with our results, however we are also aware of the difficult
 [1]: [*What is Logistic Regression*. IBM, 2023](https://www.ibm.com/topics/logistic-regression)    
 [2]: [*What is Decision Tree*. IBM, 2023](https://www.ibm.com/topics/decision-trees)   
 [3]: [*What is Random Forest*. IBM, 2023](https://www.ibm.com/topics/random-forest)      
-[4]: [*What is KNN*. IBM, 2023](https://www.ibm.com/topics/knn)
+[4]: [*What is KNN*. IBM, 2023](https://www.ibm.com/topics/knn)   
 [5]: [*What is RNN*. IBM, 2023](https://www.ibm.com/topics/recurrent-neural-networks)    
 [6]: [PyTorch's RNN model](https://blog.floydhub.com/a-beginners-guide-on-recurrent-neural-networks-with-pytorch/)    
 
