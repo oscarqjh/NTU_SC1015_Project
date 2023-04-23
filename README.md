@@ -102,7 +102,11 @@ Logistic Regression is a statistical model often used for classification. It est
 
 For this project, we will be using it to predict the outcome of a game (win/lose) based on "x kills obtained before y minutes". For the model based on "x kills obtained before 5 minutes" we are able to obtain a model with **~64%** accuracy.
 
-We also modelled it on tower takedown and tried predicting the outcome of a game based on "x tower takedowns before y minutes". Despite being able to achieve a much better accuracy of **~71%**, we observed a weird phenomenon where getting 1-3 tower takedowns before y minutes actually lowers the probability of the team to win. The probability of winning only becomes more than 50% after getting 4 tower takedowns or more before y minutes.   
+We also modelled it on tower takedown and tried predicting the outcome of a game based on "x tower takedowns before y minutes". Despite being able to achieve a much better accuracy of **~71%**, we observed a weird phenomenon where getting 1-3 tower takedowns before y minutes actually lowers the probability of the team to win. The probability of winning only becomes more than 50% after getting 4 tower takedowns or more before y minutes.    
+
+To improve on this, we continued to use multiple variable to fit the logistic regression model. This gave us a unsurprising high accuracy-model of **~92%**, however we realise that this model have little practical value since we are fitting it with data of a full match, meaning that it can only predict the outcome of a match to high accuracy after the match is over.
+
+Lastly, we decided to fit the model with only data until 30 minutes of the game. This gave us a model with **~79%** accuracy, which is also expected. However we are much more satisfied with this model since there are some practical use for this, being able to predict the outcome of a game before its even over.   
 
 #### **3.2 Single/Multi-Variated Decision Tree**   
 A decision tree is a non-parametric supervised learning algorithm utilised for classification and regression tasks. Multi Variated Decision Tree models are a type of classification model that is based on multiple variables[2]. In this project, we used both single and multi-variated decision tree on different analysis.
