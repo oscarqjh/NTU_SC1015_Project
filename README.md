@@ -25,13 +25,13 @@ All Dataset found in this repository is taken from [Kaggle](https://www.kaggle.c
 ```
 #### 1.2 Suggested Read Order
 We separated our Jupyter notebook into different segments for easier reading. we suggest reading them in the following order:
-1. [Initial_EDA.ipynb](https://github.com/oscarqjh/SC1015Project/blob/cf8f089a42c83003e86dbd95d4a29d426aa11a04/Initial_EDA.ipynb)
-2. [LogisticRegression.ipynb](https://github.com/oscarqjh/SC1015Project/blob/cf8f089a42c83003e86dbd95d4a29d426aa11a04/LogisticRegression.ipynb)
-3. [Champion_Analysis.ipynb](https://github.com/oscarqjh/SC1015Project/blob/cf8f089a42c83003e86dbd95d4a29d426aa11a04/Champions_Analysis.ipynb)
-4. [Gold_Analysis.ipynb](https://github.com/oscarqjh/SC1015Project/blob/cf8f089a42c83003e86dbd95d4a29d426aa11a04/Gold_Analysis.ipynb)
-5. [TreesAndForests.ipynb](https://github.com/oscarqjh/SC1015Project/blob/cf8f089a42c83003e86dbd95d4a29d426aa11a04/TreesAndForests.ipynb)
-6. [KNN.ipynb](https://github.com/oscarqjh/NTU_SC1015_Project/blob/559a04ad22259492f175635d99048c2d8f4cce04/KNN.ipynb)
-7. [RNN.ipynb](https://github.com/oscarqjh/SC1015Project/blob/cf8f089a42c83003e86dbd95d4a29d426aa11a04/RNN.ipynb)
+1. [Initial_EDA.ipynb](https://github.com/oscarqjh/NTU_SC1015_Project/blob/main/Initial_EDA.ipynb)
+2. [LogisticRegression.ipynb](https://github.com/oscarqjh/NTU_SC1015_Project/blob/main/LogisticRegression.ipynb)
+3. [Champion_Analysis.ipynb](https://github.com/oscarqjh/NTU_SC1015_Project/blob/main/Champions_Analysis.ipynb)
+4. [Gold_Analysis.ipynb](https://github.com/oscarqjh/NTU_SC1015_Project/blob/main/Gold_Analysis.ipynb)
+5. [TreesAndForests.ipynb](https://github.com/oscarqjh/SC1015Project/blob/main/TreesAndForests.ipynb)
+6. [KNN.ipynb](https://github.com/oscarqjh/NTU_SC1015_Project/blob/main/KNN.ipynb)
+7. [RNN.ipynb](https://github.com/oscarqjh/SC1015Project/blob/main/RNN.ipynb)
 
 #### 1.2 Dependencies
 - Matplotlib 3.7
